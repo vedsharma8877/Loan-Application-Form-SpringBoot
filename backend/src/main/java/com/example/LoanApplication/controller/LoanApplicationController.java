@@ -42,6 +42,24 @@ public class LoanApplicationController {
 					loanApplicationModel.getSa2(), loanApplicationModel.getCity(), loanApplicationModel.getStatess(),
 					loanApplicationModel.getZip(), loanApplicationModel.getRd(), loanApplicationModel.getRt(),
 					loanApplicationModel.getStatus()));
+
+			LoanApplicationModel _loanApplicationModel = loanApplication.save(new LoanApplicationModel(
+					loanApplicationModel.getLamount(), loanApplicationModel.getLpurpose(),
+					loanApplicationModel.getFname(), loanApplicationModel.getMname(), loanApplicationModel.getLname(),
+					loanApplicationModel.getDob(), loanApplicationModel.getEmail(), loanApplicationModel.getHphone(),
+					loanApplicationModel.getMphone(), loanApplicationModel.getSsn(), loanApplicationModel.getSa1(),
+					loanApplicationModel.getSa2(), loanApplicationModel.getCity(), loanApplicationModel.getStatess(),
+					loanApplicationModel.getZip(), loanApplicationModel.getRd(), loanApplicationModel.getRt(),
+					loanApplicationModel.getStatus()));
+
+			LoanApplicationModel _loanApplicationModel = loanApplication.save(new LoanApplicationModel(
+					loanApplicationModel.getLamount(), loanApplicationModel.getLpurpose(),
+					loanApplicationModel.getFname(), loanApplicationModel.getMname(), loanApplicationModel.getLname(),
+					loanApplicationModel.getDob(), loanApplicationModel.getEmail(), loanApplicationModel.getHphone(),
+					loanApplicationModel.getMphone(), loanApplicationModel.getSsn(), loanApplicationModel.getSa1(),
+					loanApplicationModel.getSa2(), loanApplicationModel.getCity(), loanApplicationModel.getStatess(),
+					loanApplicationModel.getZip(), loanApplicationModel.getRd(), loanApplicationModel.getRt(),
+					loanApplicationModel.getStatus()));
 			return new ResponseEntity<>(_loanApplicationModel, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
